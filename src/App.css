@@ -1,0 +1,12 @@
+/* Container général */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+}
+.title{
+  text-align: center;
+  
+}

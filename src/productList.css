@@ -1,0 +1,115 @@
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 16px;
+}
+
+/* Card container */
+.product-card {
+ 
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Titre */
+/* Entête noire */
+.product-header {
+    background-color: #788db4;    /* même teinte que ton bouton hover */
+
+  padding: 12px 16px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+}
+
+.product-header .product-title {
+  text-align: center;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;                 /* texte blanc */
+  line-height: 1.2;
+  
+}
+
+.content-card{
+  background: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  transition: box-shadow .3s, transform .2s;
+}
+
+/* Remonte légèrement le reste du contenu pour éliminer le padding natif */
+.product-desc,
+.product-price,
+.product-stock,
+.product-btn {
+  margin-top: 12px;
+}
+
+
+/* Description */
+.product-desc {
+  flex: 1;              /* occupe l'espace vertical restant */
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: #555;          /* gris pour la description */
+  line-height: 1.4;
+}
+
+/* Prix */
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #464c57;       /* bleu pour attirer l’œil */
+  margin-bottom: 12px;
+}
+
+/* Stock */
+.product-stock {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 16px;
+}
+.product-stock.out {
+  color: #d32f2f;       /* rouge si rupture */
+}
+
+/* Bouton */
+.product-btn {
+  margin-top: auto;     /* pousse le bouton tout en bas */
+  padding: 10px 0;
+  background-color: #464c57;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .2s, transform .1s;
+}
+
+.product-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.product-btn:not(:disabled):hover {
+  background-color: #788db4;
+  transform: translateY(-1px);
+}
+
+.product-btn:not(:disabled):active {
+  transform: translateY(1px);
+}

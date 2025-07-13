@@ -1,0 +1,125 @@
+/* Table du panier */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* En-tête */
+.cart-table thead th {
+  background: #f5f5f5;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Corps */
+.cart-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+/* Colonne Article */
+.cart-table .article {
+  display: flex;
+  align-items: center;
+}
+.cart-table .thumbnail {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  /* Remplace le background uni par un motif rillé */
+   background-image: repeating-linear-gradient(
+    45deg,
+    /* bande claire */
+    #e0e0e0 3px,
+    #e0e0e0 5px,
+
+    /* zone transparente (emplacement du “grand” espace) */
+    transparent 2px,
+    transparent 10px,
+
+    /* bande foncée */
+    #c0c0c0 8px,
+    #c0c0c0 10px
+  );
+}
+.cart-table .name {
+  margin-left: 10px;
+}
+/* Quantité et prix */
+.cart-table .unit-price,
+.cart-table .qty,
+.cart-table .subtotal {
+  padding-left: 2rem;
+}
+
+/* Actions (boutons + – 🗑) */
+.cart-table .actions {
+
+}
+.cart-table .actions button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px;
+  color: #788db4;
+  transition: color .2s;
+}
+.cart-table .actions button:hover {
+  color: #115293;
+}
+
+/* Pied de page : ligne Total */
+.cart-table tfoot .total-row td {
+    padding-left: 2rem;
+    padding-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.cart-table tfoot .total-row td:first-child {
+  /* on masque les premières cellules vides */
+  background: transparent;
+  border: none;
+}
+
+.cart-table .total-value .total-value-content{
+margin-left: -1rem;
+   
+}
+/* Boutons en dessous */
+.checkout-btn,
+.clear-cart-btn {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color .2s, transform .1s;
+}
+
+.checkout-btn {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.checkout-btn:hover {
+  background-color: #115293;
+  transform: translateY(-1px);
+}
+
+.clear-cart-btn {
+  background-color: #9e9e9e;
+  color: #fff;
+}
+
+.clear-cart-btn:hover {
+  background-color: #707070;
+  transform: translateY(-1px);
+}
